@@ -1,0 +1,16 @@
+{
+  "name": "toke-codex",
+  "private": true,
+  "packageManager": "pnpm@9.10.0",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "dev:bridge": "pnpm --filter @cs/bridge dev",
+    "dev:tui": "pnpm --filter @cs/tui dev",
+    "dev:desktop": "pnpm --filter @cs/desktop dev",
+    "dev:mobile": "pnpm --filter @cs/mobile start",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "doctor": "node scripts/doctor.cjs",
+    "node:sidecar": "pnpm --filter @cs/bridge build && node scripts/pkg-sidecar.cjs"
+  }
+}

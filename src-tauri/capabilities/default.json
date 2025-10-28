@@ -1,0 +1,17 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "Main window capability",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        { "name": "binaries/continue-bridge", "sidecar": true, "args": true },
+        { "name": "cn", "sidecar": false, "args": true },
+        { "name": "lms", "sidecar": false, "args": true }
+      ]
+    }
+  ]
+}

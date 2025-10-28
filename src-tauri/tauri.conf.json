@@ -1,0 +1,21 @@
+{
+  "productName": "Continue Studio",
+  "identifier": "com.vantage.continuestudio",
+  "build": {
+    "beforeDevCommand": "pnpm --filter @cs/desktop dev",
+    "beforeBuildCommand": "pnpm build"
+  },
+  "bundle": {
+    "externalBin": ["binaries/continue-bridge"]
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Continue Studio",
+        "width": 1200,
+        "height": 800
+      }
+    ]
+  }
+}
